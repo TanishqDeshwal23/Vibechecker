@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 
 function MoodAnalyzer() {
@@ -120,12 +121,12 @@ function MoodAnalyzer() {
         {/* 🎯 SUGGESTIONS */}
         <div style={{ marginBottom: "15px" }}>
           {[ "Happy 😊",
-  "Sad 😔",
-  "Chill 😌",
-  "Angry 😡",
-  "Motivated 💪",
-  "Anxious 😟",
-  "Party 🎉"].map((m, i) => (
+              "Sad 😔",
+              "Chill 😌",
+              "Angry 😡",
+              "Motivated 💪",
+              "Anxious 😟",
+              "Party 🎉"].map((m, i) => (
             <button
               key={i}
               onClick={() => setInput(m)}

@@ -27,7 +27,7 @@ function App() {
   const [textMood, setTextMood] = useState("");
   const [songs, setSongs] = useState([]);
   const [currentSong, setCurrentSong] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  //const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [theme, setTheme] = useState("dark");
 
@@ -44,12 +44,9 @@ function App() {
   const audioRef = useRef(null);
 
   const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
+  
 
-  const [bgGradient, setBgGradient] = useState(
-    "linear-gradient(135deg, #0f172a, #1e293b)"
-  );
-
+  
   const isLoggedIn = localStorage.getItem("isLoggedIn");
 
   const moods = [
@@ -178,7 +175,7 @@ function App() {
   // 🎧 SELECT SONG
   const selectSong = async (song, index) => {
     setCurrentSong(song);
-    setCurrentIndex(index);
+    
 
     setRecent((prev) => {
       const updated = [song, ...prev.filter((s) => s.name !== song.name)];
@@ -372,7 +369,7 @@ function App() {
           </div>
 
           {/* MAIN */}
-          <div className="main" style={{ background: bgGradient }}>
+          <div className="main">
             <Routes>
               <Route
                 path="/"
