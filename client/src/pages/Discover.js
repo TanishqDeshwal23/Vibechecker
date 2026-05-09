@@ -9,10 +9,10 @@ function Discover({ setCurrentSong }) {
     try {
       setLoading(true);
 
-      const res = await axios.post(
-        "http://localhost:5000/recommend?ts=" + Date.now(),
-        { mood: "trending" } // 🔥 triggers random keyword
-      );
+    const res = await axios.post(
+      "https://YOUR-RENDER-URL.onrender.com/recommend?ts=" + Date.now(),
+      { mood: "trending" }
+    );
 
       setSongs(res.data.songs);
     } catch (err) {

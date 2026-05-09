@@ -135,7 +135,7 @@ function App() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/recommend?ts=" + Date.now(),
+        "https://vibechecker-backend.onrender.com/recommend?ts=" + Date.now(),
         { mood: finalMood }
       );
 
