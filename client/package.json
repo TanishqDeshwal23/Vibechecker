@@ -10,7 +10,7 @@
     "@tsparticles/react": "^3.0.0",
     "axios": "^1.15.0",
     "face-api.js": "^0.22.2",
-    "firebase": "^12.13.0",
+    "firebase": "^10.14.1",
     "framer-motion": "^12.38.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
